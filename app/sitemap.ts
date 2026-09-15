@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { empowerment } from "@/data/empowerment";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://surefirechristianchurch.org";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://surefirechristianchurch.org";
 
 const staticRoutes = [
   "",

@@ -9,7 +9,7 @@ const display = Fraunces({ subsets: ["latin"], variable: "--font-display", displ
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-mono", display: "swap" });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://surefirechristianchurch.org";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://surefirechristianchurch.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
