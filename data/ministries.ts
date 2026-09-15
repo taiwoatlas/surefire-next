@@ -1,0 +1,45 @@
+import type { Ministry } from "@/types/ministry";
+
+export const ministries: readonly Ministry[] = [
+  {
+    name: "Children's Ministry",
+    desc: "Nurturing the youngest members of the Surefire family.",
+    slug: "children",
+    photo: "/images/ministries/ministry-children.jpg",
+    eyebrow: "Growing young hearts in faith.",
+    copy: "A place where children learn, grow, ask questions and discover the joy of following Christ.",
+  },
+  {
+    name: "Youth Ministry",
+    desc: "Raising a generation of surefire young leaders.",
+    slug: "youth",
+    photo: "/images/ministries/ministry-youth.jpg",
+    eyebrow: "Faith for today. Purpose for tomorrow.",
+    copy: "A generation discovering faith, developing purpose and growing into leaders.",
+  },
+  {
+    name: "Men's Ministry",
+    desc: "Building men of faith, purpose and integrity.",
+    slug: "men",
+    photo: "/images/ministries/ministry-men.jpg",
+    eyebrow: "Faith that builds men.",
+    copy: "Growing together in faith, character and leadership.",
+  },
+  {
+    name: "Women's Ministry",
+    desc: "Empowering women in faith, family and society.",
+    slug: "women",
+    photo: "/images/ministries/ministry-women.jpg",
+    eyebrow: "Faith. Fellowship. Purpose.",
+    copy: "Growing together in faith, wisdom and purpose.",
+  },
+  { name: "Choir / Music Ministry", desc: "Leading the church in worship and praise." },
+  { name: "Evangelism / Outreach", desc: "Taking the gospel beyond the walls of the church." },
+  { name: "Prayer Ministry", desc: "Standing in the gap through intercession." },
+  { name: "Media / Technical Department", desc: "Serving the ministry through sound, media and technology." },
+  { name: "Ushering Department", desc: "Welcoming every soul that walks through our doors." },
+  { name: "Welfare Department", desc: "Caring for the practical needs of the church family." },
+  { name: "Bible Study", desc: "Growing deeper in the knowledge of God's word." },
+  { name: "Workers' Department", desc: "Coordinating the servant-leaders of the ministry." },
+  { name: "Protocol Ministry", desc: "Ensuring order and honour in every gathering." },
+];
