@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { ministries } from "@/data/ministries";
+import { ministryHref } from "@/types/ministry";
 
 export const metadata: Metadata = {
   title: "Ministries",
@@ -25,7 +27,11 @@ export default function MinistriesPage() {
       <Section tone="paper">
         <div className="grid gap-4 sm:grid-cols-2">
           {featured.map((ministry) => (
-            <div key={ministry.name} className="overflow-hidden rounded-sm border border-line bg-charcoal">
+            <Link
+              key={ministry.name}
+              href={ministryHref(ministry)}
+              className="group overflow-hidden rounded-sm border border-line bg-charcoal transition-transform hover:-translate-y-1"
+            >
               <div className="relative h-56 w-full">
                 <Image src={ministry.photo!} alt={ministry.name} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
               </div>
@@ -33,7 +39,7 @@ export default function MinistriesPage() {
                 <h3 className="font-display text-xl">{ministry.name}</h3>
                 <p className="mt-2 text-sm text-gray">{ministry.desc}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </Section>

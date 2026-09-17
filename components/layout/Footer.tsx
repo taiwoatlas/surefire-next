@@ -46,8 +46,18 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 max-w-[1240px] border-t border-lineOnInk px-6 pt-6 text-xs text-gray-onInk md:px-10">
-        © {new Date().getFullYear()} {church.churchName}. Founded {church.established} by {church.founder}.
+      <div className="mx-auto mt-12 flex max-w-[1240px] flex-wrap items-center justify-between gap-4 border-t border-lineOnInk px-6 pt-6 text-xs text-gray-onInk md:px-10">
+        <span>
+          © {new Date().getFullYear()} {church.churchName}. Founded {church.established} by {church.founder}.
+        </span>
+        <span className="flex gap-4">
+          <Link href="/privacy" className="hover:text-paper">
+            Privacy
+          </Link>
+          <Link href="/terms" className="hover:text-paper">
+            Terms
+          </Link>
+        </span>
       </div>
     </footer>
   );
