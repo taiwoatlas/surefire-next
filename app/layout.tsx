@@ -3,6 +3,7 @@ import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import { church } from "@/data/church";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CommandPalette } from "@/components/search/CommandPalette";
 import "./globals.css";
 
 const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { readonly children: React.Reac
           Skip to content
         </a>
         <Header />
+        <CommandPalette />
         <main id="main-content">{children}</main>
         <Footer />
       </body>
