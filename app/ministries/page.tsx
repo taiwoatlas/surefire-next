@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { ministries } from "@/data/ministries";
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function MinistriesPage() {
+  const featured = ministries.filter((m) => m.photo);
+  const rest = ministries.filter((m) => !m.photo);
+
   return (
     <>
       <PageHeader
@@ -19,8 +23,24 @@ export default function MinistriesPage() {
       />
 
       <Section tone="paper">
+        <div className="grid gap-4 sm:grid-cols-2">
+          {featured.map((ministry) => (
+            <div key={ministry.name} className="overflow-hidden rounded-sm border border-line bg-charcoal">
+              <div className="relative h-56 w-full">
+                <Image src={ministry.photo!} alt={ministry.name} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl">{ministry.name}</h3>
+                <p className="mt-2 text-sm text-gray">{ministry.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="stone">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {ministries.map((ministry) => (
+          {rest.map((ministry) => (
             <div key={ministry.name} className="rounded-sm border border-line bg-charcoal p-6">
               <h3 className="font-display text-xl">{ministry.name}</h3>
               <p className="mt-2 text-sm text-gray">{ministry.desc}</p>

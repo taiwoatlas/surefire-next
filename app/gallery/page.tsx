@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { galleryImages } from "@/data/gallery";
@@ -27,7 +28,21 @@ export default function GalleryPage() {
         ) : (
           <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
             {galleryImages.map((img) => (
-              <div key={img.src} className="aspect-square bg-stone" />
+              <a
+                key={img.src}
+                href={img.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block aspect-square overflow-hidden rounded-sm bg-stone"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 50vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
             ))}
           </div>
         )}

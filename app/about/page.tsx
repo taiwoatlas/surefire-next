@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { church } from "@/data/church";
@@ -47,18 +48,31 @@ export default function AboutPage() {
       </Section>
 
       <Section tone="ink">
-        <p className="font-mono text-xs uppercase tracking-wide text-gold">Our History</p>
-        <h2 className="mt-3 font-display text-3xl">Where it began</h2>
-        <p className="mt-4 max-w-xl text-gray-onInk">
-          One confirmed milestone so far — further chapters of the church&apos;s story will be added here as
-          they&apos;re documented.
-        </p>
-        <div className="mt-8 max-w-xl rounded-sm border border-lineOnInk p-6">
-          <p className="font-mono text-xs uppercase tracking-wide text-gold">{church.established} · Founding</p>
-          <p className="mt-3 text-sm text-gray-onInk">
-            The Surefire Christian Church of God was established under the leadership of {church.founder}, at{" "}
-            {church.address}.
-          </p>
+        <div className="grid gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-wide text-gold">Our History</p>
+            <h2 className="mt-3 font-display text-3xl">Where it began</h2>
+            <p className="mt-4 max-w-xl text-gray-onInk">
+              One confirmed milestone so far — further chapters of the church&apos;s story will be added here as
+              they&apos;re documented.
+            </p>
+            <div className="mt-8 max-w-xl rounded-sm border border-lineOnInk p-6">
+              <p className="font-mono text-xs uppercase tracking-wide text-gold">{church.established} · Founding</p>
+              <p className="mt-3 text-sm text-gray-onInk">
+                The Surefire Christian Church of God was established under the leadership of {church.founder}, at{" "}
+                {church.address}.
+              </p>
+            </div>
+          </div>
+          <div className="relative h-80 w-full overflow-hidden rounded-sm">
+            <Image
+              src="/images/church/building-chapel-facade.jpg"
+              alt="Living Wonders Chapel, home of The Surefire Christian Church of God"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </Section>
     </>
