@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { church, services } from "@/data/church";
@@ -60,9 +61,9 @@ export default function PlanYourVisitPage() {
       <Section tone="paper">
         <p className="font-mono text-xs uppercase tracking-wide text-red">After Service</p>
         <p className="mt-4 max-w-xl text-gray">
-          Want to connect further? Explore our <a href="/ministries" className="text-red underline">ministries</a>,{" "}
-          <a href="/prayer-request" className="text-red underline">request prayer</a>, or{" "}
-          <a href="/contact" className="text-red underline">reach out to us directly</a>.
+          Want to connect further? Explore our <Link href="/ministries" className="text-red underline">ministries</Link>,{" "}
+          <Link href="/prayer-request" className="text-red underline">request prayer</Link>, or{" "}
+          <Link href="/contact" className="text-red underline">reach out to us directly</Link>.
         </p>
       </Section>
 

@@ -20,6 +20,7 @@ export function MobileNav() {
     if (!open) return;
 
     const previouslyFocused = document.activeElement as HTMLElement | null;
+    const fallbackFocusTarget = triggerRef.current;
     const panel = panelRef.current;
     const focusable = panel?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])');
     focusable?.[0]?.focus();
@@ -48,7 +49,7 @@ export function MobileNav() {
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = originalOverflow;
-      (previouslyFocused ?? triggerRef.current)?.focus();
+      (previouslyFocused ?? fallbackFocusTarget)?.focus();
     };
   }, [open]);
 
