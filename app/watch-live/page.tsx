@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
+import { StageCurtain } from "@/components/decor/StageCurtain";
 import { church, services } from "@/data/church";
 
 export const metadata: Metadata = {
@@ -19,8 +20,10 @@ export default function WatchLivePage() {
       />
 
       <Section tone="paper">
-        <div className="flex aspect-video items-center justify-center rounded-sm bg-ink text-center text-paper">
-          <div className="px-6">
+        <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-sm bg-ink text-center text-paper">
+          <StageCurtain side="left" />
+          <StageCurtain side="right" />
+          <div className="relative z-10 px-6">
             <p className="font-mono text-xs uppercase tracking-wide text-gold">Offline</p>
             <h2 className="mt-4 font-display text-2xl md:text-3xl">No live stream at the moment</h2>
           </div>
@@ -30,7 +33,7 @@ export default function WatchLivePage() {
       <Section tone="stone">
         <p className="font-mono text-xs uppercase tracking-wide text-red">Where We&apos;ll Stream</p>
         <h2 className="mt-3 font-display text-2xl">Watch on your platform of choice</h2>
-        <div className="mt-8 max-w-md rounded-sm border border-line bg-charcoal p-6">
+        <div className="relative spotlight-card mt-8 max-w-md rounded-sm border border-line bg-charcoal p-6">
           <h3 className="font-display text-xl">Facebook</h3>
           <p className="mt-2 text-sm text-gray">
             Follow <strong>{church.churchName}</strong> on Facebook for live broadcasts.

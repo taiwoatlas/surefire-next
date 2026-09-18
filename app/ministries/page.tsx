@@ -30,7 +30,7 @@ export default function MinistriesPage() {
             <Link
               key={ministry.name}
               href={ministryHref(ministry)}
-              className="group overflow-hidden rounded-sm border border-line bg-charcoal transition-transform hover:-translate-y-1"
+              className="group relative spotlight-card overflow-hidden rounded-sm border border-line bg-charcoal transition-transform hover:-translate-y-1"
             >
               <div className="relative h-56 w-full">
                 <Image src={ministry.photo!} alt={ministry.name} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />

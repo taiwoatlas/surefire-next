@@ -15,7 +15,7 @@ export function ServiceCard({ service }: { readonly service: Service }) {
   }, [service]);
 
   return (
-    <div className="rounded-sm border border-line bg-charcoal p-6">
+    <div className="relative spotlight-card rounded-sm border border-line bg-charcoal p-6">
       <p className="font-mono text-xs text-red">{service.num}</p>
       <h3 className="mt-2 font-display text-xl">{service.name}</h3>
       <p className="mt-2 text-sm text-gray">{service.day}</p>

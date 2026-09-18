@@ -28,7 +28,7 @@ export default function EmpowermentPage() {
         <p className="font-mono text-xs uppercase tracking-wide text-red">The Journey</p>
         <div className="mt-8 grid gap-4 md:grid-cols-4">
           {empowerment.journey.map((stage) => (
-            <div key={stage.num} className="rounded-sm border border-line bg-charcoal p-6">
+            <div key={stage.num} className="relative spotlight-card rounded-sm border border-line bg-charcoal p-6">
               <p className="font-mono text-xs text-red">0{stage.num}</p>
               <h3 className="mt-2 font-display text-xl">{stage.name}</h3>
               <p className="mt-2 text-sm text-gray">{stage.strap}</p>
