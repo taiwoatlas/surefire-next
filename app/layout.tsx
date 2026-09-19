@@ -4,6 +4,7 @@ import { church } from "@/data/church";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CommandPalette } from "@/components/search/CommandPalette";
+import { ChurchChat } from "@/components/church/ChurchChat";
 import "./globals.css";
 
 const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { readonly children: React.Reac
         <CommandPalette />
         <main id="main-content">{children}</main>
         <Footer />
+        <ChurchChat />
       </body>
     </html>
   );

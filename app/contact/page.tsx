@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { church, services } from "@/data/church";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { ChurchLocator } from "@/components/church/ChurchLocator";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -64,6 +65,13 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+        </div>
+      </Section>
+
+      <Section tone="paper">
+        <p className="font-mono text-xs uppercase tracking-wide text-red">Find Us</p>
+        <div className="mt-6">
+          <ChurchLocator />
         </div>
       </Section>
     </>
