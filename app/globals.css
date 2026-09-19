@@ -26,11 +26,6 @@
 }
 
 @layer components {
-  /**
-   * A warm "stage light" glow that appears behind a card on hover —
-   * a restrained nod to bulbs/spotlights rather than a literal graphic.
-   * Pure opacity fade, so it's safe to leave active under reduced motion.
-   */
   .spotlight-card::before {
     content: "";
     position: absolute;
@@ -50,9 +45,6 @@
     z-index: 1;
   }
 
-  /* Decorative bar animation for AudioVisualizer — respects the global
-     reduced-motion override above automatically, since that rule caps
-     animation-duration for every element. */
   @keyframes audioBarPulse {
     0%, 100% { height: 20%; opacity: 0.6; }
     50% { height: 90%; opacity: 1; }
@@ -60,5 +52,10 @@
   .audio-bar {
     height: 20%;
     animation: audioBarPulse 1.1s ease-in-out infinite;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 }

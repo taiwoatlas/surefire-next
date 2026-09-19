@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { BulbString } from "@/components/decor/BulbString";
+import { EventCalendar } from "@/components/events/EventCalendar";
 import { getUpcomingEvents, getRecurringGatherings } from "@/lib/content";
 import { EmptyState } from "@/components/church/EmptyState";
 
@@ -44,6 +45,14 @@ export default function EventsPage() {
       </div>
 
       <Section tone="stone">
+        <p className="font-mono text-xs uppercase tracking-wide text-red">Calendar</p>
+        <h2 className="mt-3 font-display text-2xl">See it on the calendar</h2>
+        <div className="mt-8 max-w-md">
+          <EventCalendar />
+        </div>
+      </Section>
+
+      <Section tone="paper">
         <p className="font-mono text-xs uppercase tracking-wide text-red">Upcoming</p>
         <div className="mt-6">
           {events.length === 0 ? (

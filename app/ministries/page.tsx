@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { ministries } from "@/data/ministries";
 import { ministryHref } from "@/types/ministry";
+import { MinistryExplorer } from "@/components/ministries/MinistryExplorer";
 
 export const metadata: Metadata = {
   title: "Ministries",
@@ -13,7 +14,6 @@ export const metadata: Metadata = {
 
 export default function MinistriesPage() {
   const featured = ministries.filter((m) => m.photo);
-  const rest = ministries.filter((m) => !m.photo);
 
   return (
     <>
@@ -45,13 +45,10 @@ export default function MinistriesPage() {
       </Section>
 
       <Section tone="stone">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.map((ministry) => (
-            <div key={ministry.name} className="rounded-sm border border-line bg-charcoal p-6">
-              <h3 className="font-display text-xl">{ministry.name}</h3>
-              <p className="mt-2 text-sm text-gray">{ministry.desc}</p>
-            </div>
-          ))}
+        <p className="font-mono text-xs uppercase tracking-wide text-red">Every Ministry</p>
+        <h2 className="mt-3 font-display text-2xl">Search the full list</h2>
+        <div className="mt-8">
+          <MinistryExplorer />
         </div>
       </Section>
     </>
