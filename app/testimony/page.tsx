@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { TestimonyForm } from "@/components/testimony/TestimonyForm";
+import { TestimonyCarousel } from "@/components/testimony/TestimonyCarousel";
 
 export const metadata: Metadata = {
   title: "Testimony",
@@ -17,6 +18,13 @@ export default function TestimonyPage() {
         lede="Your story could be exactly what someone else needs to hear."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Testimony" }]}
       />
+
+      <Section tone="stone">
+        <p className="font-mono text-xs uppercase tracking-wide text-red">Testimonies</p>
+        <div className="mt-6 max-w-xl">
+          <TestimonyCarousel />
+        </div>
+      </Section>
 
       <Section tone="paper">
         <div className="mx-auto max-w-lg">

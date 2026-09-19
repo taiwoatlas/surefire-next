@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { church } from "@/data/church";
+import { ScriptureReader } from "@/components/scripture/ScriptureReader";
 
 export const metadata: Metadata = {
   title: "About",
@@ -44,6 +45,14 @@ export default function AboutPage() {
               <h3 className="mt-2 font-display text-xl">{value}</h3>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section tone="stone">
+        <p className="font-mono text-xs uppercase tracking-wide text-red">Scripture</p>
+        <h2 className="mt-3 font-display text-2xl">Grounded in the Word</h2>
+        <div className="mt-8 max-w-xl">
+          <ScriptureReader />
         </div>
       </Section>
 
