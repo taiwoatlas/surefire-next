@@ -30,6 +30,7 @@ const PAGE_DESCRIPTIONS: Record<string, string> = {
   "/testimony": "Share what God has done in your life.",
   "/counselling": "Request counselling with a pastor.",
   "/plan-your-visit": "Everything you need to know before you visit.",
+  "/empowerment-assessment": "A short assessment to find the right Empowerment pathway for you.",
 };
 
 function pagesIndex(): SearchItem[] {

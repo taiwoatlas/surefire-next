@@ -20,4 +20,5 @@ export const footerConnect: readonly NavItem[] = [
   { label: "Share a Testimony", href: "/testimony" },
   { label: "Request Counselling", href: "/counselling" },
   { label: "Plan Your Visit", href: "/plan-your-visit" },
+  { label: "Empowerment Assessment", href: "/empowerment-assessment" },
 ];

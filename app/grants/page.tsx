@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { DepartmentPage } from "@/components/empowerment/DepartmentPage";
 import { GrantApplicationForm } from "@/components/grants/GrantApplicationForm";
 import { Section } from "@/components/layout/Section";
@@ -38,6 +39,20 @@ export default function Page() {
               <h3 className="mt-2 font-display text-base">{item}</h3>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section tone="stone">
+        <div className="mx-auto max-w-md text-center">
+          <p className="font-mono text-xs uppercase tracking-wide text-red">Not Sure Yet?</p>
+          <h2 className="mt-3 font-display text-2xl">Start with the Assessment instead</h2>
+          <p className="mt-3 text-sm text-gray">
+            If you&apos;re not sure the Grant Programme is the right fit yet, the Empowerment Needs Assessment can
+            help place you on the right pathway first.
+          </p>
+          <Link href="/empowerment-assessment" className="mt-6 inline-block rounded-sm bg-red px-6 py-3 text-sm font-semibold text-paper">
+            Start the Assessment →
+          </Link>
         </div>
       </Section>
 

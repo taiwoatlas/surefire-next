@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { empowerment, governance } from "@/data/empowerment";
@@ -65,6 +66,9 @@ export default function EmpowermentPage() {
           <p className="font-mono text-xs uppercase tracking-wide text-red">Not Sure Where to Start?</p>
           <h2 className="mt-3 font-display text-2xl">Take the Empowerment Assessment</h2>
           <p className="mt-3 text-sm text-gray">A short, step-based assessment to help place you on the right pathway.</p>
+          <Link href="/empowerment-assessment" className="mt-6 inline-block rounded-sm bg-red px-6 py-3 text-sm font-semibold text-paper">
+            Start the Assessment →
+          </Link>
         </div>
       </Section>
     </>
