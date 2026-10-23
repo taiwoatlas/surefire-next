@@ -1,18 +1,23 @@
-import { Button } from "@/components/ui/Button";
+import Link from "next/link";
+import { ArrowUpRight, HeartHandshake } from "lucide-react";
 
 export function PartnerFeature() {
   return (
-    <section className="bg-ink py-20 text-paper md:py-28">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-10">
-        <p className="font-mono text-xs uppercase tracking-wide text-gold">Partner</p>
-        <h2 className="mt-3 max-w-lg font-display text-3xl md:text-4xl">Partner with the mission</h2>
-        <p className="mt-4 max-w-md text-gray-onInk">
-          Partnership — through giving and through prayer — helps carry forward the church&apos;s ministry and its
-          Empowerment work. It&apos;s participation, not a transaction.
-        </p>
-        <Button href="/partner" variant="primary" className="mt-8">
-          Partner with Surefire
-        </Button>
+    <section className="bg-[#18382b] py-11 text-white sm:py-14">
+      <div className="mx-auto flex max-w-[1320px] flex-col gap-6 px-5 sm:px-8 md:flex-row md:items-center md:justify-between md:px-10">
+        <div className="flex items-start gap-4">
+          <span className="grid size-12 shrink-0 place-items-center rounded-2xl border border-[#e7cb87]/30 bg-white/5 text-[#e7cb87]">
+            <HeartHandshake size={22} aria-hidden="true" />
+          </span>
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#e7cb87]">Be part of the mission</p>
+            <h2 className="mt-1 font-display text-2xl sm:text-3xl">Help carry the work forward.</h2>
+            <p className="mt-2 max-w-xl text-sm leading-6 text-white/70">Partner through prayer, giving, and practical service as we build lives and strengthen communities.</p>
+          </div>
+        </div>
+        <Link href="/partner" className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#d8bb76] px-5 text-sm font-semibold text-[#10291f] transition hover:bg-[#ecd9a7] md:self-center">
+          Partner with us <ArrowUpRight size={16} aria-hidden="true" />
+        </Link>
       </div>
     </section>
   );
