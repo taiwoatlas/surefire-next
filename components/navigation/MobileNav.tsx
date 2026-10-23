@@ -75,7 +75,7 @@ export function MobileNav() {
   );
 
   return (
-    <div className="md:hidden">
+    <div className="xl:hidden">
       <button ref={triggerRef} type="button" aria-expanded={open} aria-controls="mobile-nav-panel" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen((v) => !v)} className="rounded-full border border-white/20 p-2.5 text-white transition hover:border-[#d8bb76] hover:text-[#e7cb87]">
         {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
       </button>
