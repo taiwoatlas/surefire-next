@@ -37,13 +37,13 @@ export default function AboutPage() {
       <Section tone="stone">
         <div className="grid gap-5 md:grid-cols-[.65fr_1.35fr] md:items-center md:gap-8">
           <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">What shapes us</p><h2 className="mt-2 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Our values in action.</h2><p className="mt-2 text-sm leading-6 text-[#686563]">Principles that shape how we worship, lead, serve and treat people.</p></div>
-          <div className="grid grid-cols-2 gap-px overflow-hidden border border-[#dedad7] bg-[#dedad7] sm:grid-cols-4">{church.values.map((value, i) => <article key={value} className="bg-white p-4 sm:p-5"><p className="text-[10px] font-bold tracking-[.16em] text-[#c8192e]">0{i + 1}</p><h3 className="mt-2 text-lg font-black text-[#171717]">{value}</h3></article>)}</div>
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-[#E0E0E0] bg-[#E0E0E0] sm:grid-cols-4">{church.values.map((value, i) => <article key={value} className="bg-white p-4 sm:p-5"><p className="text-[10px] font-bold tracking-[.16em] text-[#c8192e]">0{i + 1}</p><h3 className="mt-2 text-lg font-black text-[#171717]">{value}</h3></article>)}</div>
         </div>
       </Section>
       <Section tone="paper">
         <div className="grid gap-5 md:grid-cols-[.7fr_1.3fr] md:items-start">
-          <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">Our foundation</p><h2 className="mt-2 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Grounded in the Word.</h2><p className="mt-2 text-sm leading-6 text-[#686563]">Scripture remains central to our faith, decisions and everyday walk with God.</p><div className="mt-5 flex gap-3 border-t border-[#e4e1df] pt-4"><Quote size={20} className="shrink-0 text-[#c8192e]" /><p className="text-sm font-semibold leading-6 text-[#171717]">We believe transformed lives become a testimony that reaches far beyond the church walls.</p></div></div>
-          <div className="rounded-xl border border-[#e4e1df] bg-white p-4 sm:p-5"><ScriptureReader /></div>
+          <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">Our foundation</p><h2 className="mt-2 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Grounded in the Word.</h2><p className="mt-2 text-sm leading-6 text-[#686563]">Scripture remains central to our faith, decisions and everyday walk with God.</p><div className="mt-5 flex gap-3 border-t border-[#E0E0E0] pt-4"><Quote size={20} className="shrink-0 text-[#c8192e]" /><p className="text-sm font-semibold leading-6 text-[#171717]">We believe transformed lives become a testimony that reaches far beyond the church walls.</p></div></div>
+          <div className="rounded-xl border border-[#E0E0E0] bg-white p-4 sm:p-5"><ScriptureReader /></div>
         </div>
       </Section>
     </>
