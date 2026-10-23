@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, CalendarDays, MapPin, MessageCircle, Users, Clock3 } from "lucide-react";
+import { ArrowUpRight, CalendarDays, MapPin, MessageCircle, Clock3 } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { church, services } from "@/data/church";
