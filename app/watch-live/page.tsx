@@ -28,7 +28,7 @@ export default function WatchLivePage() {
               <a href={church.facebook} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#c8192e] px-5 text-sm font-semibold text-[#101010]">Visit Facebook <ArrowUpRight size={15} aria-hidden="true" /></a>
             </div>
           </div>
-          <aside className="rounded-2xl border border-[#e4e1df] bg-[#f6f5f3] p-5 sm:p-6">
+          <aside className="rounded-2xl border border-[#E0E0E0] bg-[#F4F4F4] p-5 sm:p-6">
             <span className="grid size-10 place-items-center rounded-xl bg-white text-[#c8192e]"><CalendarDays size={18} aria-hidden="true" /></span>
             <p className="mt-4 font-mono text-[10px] uppercase tracking-[.18em] text-[#c8192e]">Next gathering</p>
             <h2 className="mt-2 font-display text-xl text-[#101010]">{services[0]!.name}</h2>
