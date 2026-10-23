@@ -20,7 +20,7 @@ interface SectionProps {
 
 export function Section({ tone = "paper", className, children, as: Tag = "section", id }: SectionProps) {
   return (
-    <Tag id={id} className={cn("py-20 md:py-28", toneClasses[tone], className)}>
+    <Tag id={id} className={cn("py-10 sm:py-12 md:py-16", toneClasses[tone], className)}>
       <Container>{children}</Container>
     </Tag>
   );

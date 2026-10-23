@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BookOpen } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { SermonSearch } from "@/components/sermons/SermonSearch";
@@ -11,15 +12,18 @@ export const metadata: Metadata = {
 export default function SermonsPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Grow Through the Word"
-        title="Sermons"
-        lede="A digital teaching archive — searchable by speaker, topic, series and Scripture, as messages are added."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Sermons" }]}
-      />
+      <PageHeader eyebrow="Grow through the Word" title="Messages for your walk with God." lede="Explore the teaching archive and find messages by speaker, topic, series, or Scripture as recordings are added." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Sermons" }]} />
 
       <Section tone="paper">
-        <SermonSearch />
+        <div className="grid gap-6 md:grid-cols-[.6fr_1.4fr] md:items-start">
+          <div className="rounded-2xl bg-[#10291f] p-5 text-white sm:p-6">
+            <span className="grid size-10 place-items-center rounded-xl border border-[#d8bb76]/25 bg-white/[.05] text-[#e7cb87]"><BookOpen size={19} aria-hidden="true" /></span>
+            <h2 className="mt-4 font-display text-2xl">The sermon library</h2>
+            <p className="mt-2 text-sm leading-6 text-white/65">Search teachings by topic, speaker, series, or Bible passage.</p>
+            <p className="mt-5 font-mono text-[10px] uppercase tracking-[.16em] text-[#e7cb87]">Learn · Reflect · Grow</p>
+          </div>
+          <div className="min-w-0 rounded-2xl border border-[#e6e2d8] bg-white p-4 sm:p-6"><SermonSearch /></div>
+        </div>
       </Section>
     </>
   );

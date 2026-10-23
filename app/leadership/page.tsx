@@ -15,45 +15,32 @@ export default function LeadershipPage() {
 
   return (
     <>
-      <PageHeader
-        eyebrow="Leadership"
-        title="Our Pastorate"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Leadership" }]}
-      />
+      <PageHeader eyebrow="Leadership" title="The people who serve and lead." lede="Meet the pastoral team entrusted with guiding the church community." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Leadership" }]} />
 
       {lead && (
         <Section tone="paper">
-          <div className="flex flex-col gap-8 md:flex-row md:items-center">
-            {lead.photo && (
-              <div className="relative h-80 w-64 flex-shrink-0 overflow-hidden rounded-sm">
-                <Image src={lead.photo} alt={lead.name} fill sizes="256px" className="object-cover" priority />
-              </div>
-            )}
-            <div className="max-w-md">
-              <p className="font-mono text-xs uppercase tracking-wide text-red">{lead.role}</p>
-              <h2 className="mt-3 font-display text-3xl">{lead.name}</h2>
+          <div className="grid overflow-hidden rounded-2xl border border-[#e6e2d8] bg-white md:grid-cols-[.8fr_1.2fr]">
+            {lead.photo && <div className="relative min-h-[300px] bg-[#e9eddf] sm:min-h-[380px]"><Image src={lead.photo} alt={lead.name} fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover object-top" priority /></div>}
+            <div className="flex flex-col justify-center p-6 sm:p-9 md:p-10">
+              <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Senior leadership</p>
+              <h2 className="mt-3 font-display text-3xl leading-tight text-[#18382b] sm:text-4xl">{lead.name}</h2>
+              <p className="mt-2 text-sm font-semibold text-[#315d43]">{lead.role}</p>
+              <div className="mt-5 h-px w-14 bg-[#d8bb76]" />
+              <p className="mt-5 max-w-md text-sm leading-6 text-[#756f63]">Serving the church through spiritual leadership, teaching, and the work of building a faith-filled community.</p>
             </div>
           </div>
         </Section>
       )}
 
-      <Section tone="stone">
-        <div className="grid gap-6 md:grid-cols-2">
-          {others.map((pastor) => (
-            <div key={pastor.name} className="overflow-hidden rounded-sm border border-line bg-charcoal">
-              {pastor.photo && (
-                <div className="relative h-64 w-full">
-                  <Image src={pastor.photo} alt={pastor.name} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover object-top" />
-                </div>
-              )}
-              <div className="p-8">
-                <p className="font-mono text-xs uppercase tracking-wide text-red">{pastor.role}</p>
-                <h3 className="mt-3 font-display text-2xl">{pastor.name}</h3>
-              </div>
-            </div>
-          ))}
+      {others.length > 0 && <Section tone="stone">
+        <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Pastoral team</p><h2 className="mt-2 font-display text-3xl text-[#18382b]">Serving together</h2></div><p className="max-w-md text-sm leading-6 text-[#756f63]">The team supports the spiritual life and ministry of the congregation.</p></div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {others.map((pastor) => <article key={pastor.name} className="grid overflow-hidden rounded-2xl border border-[#e2dfd5] bg-white sm:grid-cols-[.8fr_1.2fr]">
+            {pastor.photo && <div className="relative min-h-[210px] bg-[#e9eddf]"><Image src={pastor.photo} alt={pastor.name} fill sizes="(min-width: 640px) 25vw, 100vw" className="object-cover object-top" /></div>}
+            <div className="flex flex-col justify-center p-5"><p className="font-mono text-[10px] uppercase tracking-[.16em] text-[#8b6b2c]">{pastor.role}</p><h3 className="mt-2 font-display text-xl text-[#18382b]">{pastor.name}</h3></div>
+          </article>)}
         </div>
-      </Section>
+      </Section>}
     </>
   );
 }

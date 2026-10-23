@@ -1,36 +1,33 @@
 import type { Config } from "tailwindcss";
 
-/**
- * Design tokens ported 1:1 from the existing static site's
- * assets/css/style.css custom properties, so the visual identity
- * carries over exactly rather than being reinterpreted.
- */
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     screens: {
-      xs: "375px", // small mobile
-      sm: "480px", // large mobile
-      md: "768px", // tablet
-      lg: "1024px", // small laptop
-      xl: "1280px", // desktop
-      "2xl": "1536px", // large desktop
-      "3xl": "1920px", // ultrawide
+      xs: "375px",
+      sm: "480px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
     },
     extend: {
       colors: {
-        ink: "#090A0C", // obsidian — hero, footer, cinematic sections
-        charcoal: "#FFFFFF", // card / form surface
-        red: "#6E1F32", // Surefire Burgundy — primary accent
-        gold: "#D6A647", // Architectural Gold — headings, fine lines on dark
-        paper: "#F8F4EB", // warm ivory — page bg, text-on-dark
+        ink: "#10291F",
+        charcoal: "#FFFFFF",
+        red: "#315D43",
+        gold: "#D8BB76",
+        paper: "#F8F7F2",
         gray: {
-          DEFAULT: "#6B5C58", // secondary copy on light
-          onInk: "#C9B9AE", // secondary copy on dark
+          DEFAULT: "#756F63",
+          onInk: "#D4DDD5",
         },
-        line: "#E7DFD1",
-        lineOnInk: "rgba(248,244,235,0.14)",
-        stone: "#F1EADC",
+        line: "#E6E2D8",
+        lineOnInk: "rgba(255,255,255,0.16)",
+        stone: "#F0EEE5",
+        forest: "#18382B",
+        cream: "#F5F1E7",
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
@@ -42,6 +39,9 @@ const config: Config = {
       },
       transitionTimingFunction: {
         church: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
+      boxShadow: {
+        soft: "0 12px 32px rgba(24,56,43,.08)",
       },
     },
   },

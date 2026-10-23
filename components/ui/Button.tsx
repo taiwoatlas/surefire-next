@@ -6,18 +6,18 @@ type ButtonVariant = "primary" | "ghost" | "text";
 type ButtonSize = "md" | "sm";
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-red text-paper hover:bg-red/90",
-  ghost: "border border-line text-ink hover:bg-stone",
-  text: "text-ink underline decoration-red decoration-2 underline-offset-4 hover:text-red",
+  primary: "bg-red text-white shadow-sm hover:bg-ink",
+  ghost: "border border-line bg-white/70 text-ink hover:border-gold hover:bg-stone",
+  text: "text-red underline decoration-gold decoration-2 underline-offset-4 hover:text-ink",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  md: "px-6 py-3 text-sm",
-  sm: "px-4 py-2 text-xs",
+  md: "min-h-11 px-5 py-2.5 text-sm",
+  sm: "min-h-9 px-4 py-2 text-xs",
 };
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-sm font-semibold tracking-wide transition-colors duration-200 ease-church focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-normal transition-all duration-200 ease-church focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:pointer-events-none disabled:opacity-50";
 
 interface CommonProps {
   readonly variant?: ButtonVariant;
@@ -36,7 +36,7 @@ interface ButtonAsLink extends CommonProps, Omit<React.ComponentProps<typeof Lin
 
 export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
-/** The one Button in the system. Renders a <Link> when given `href`, a native <button> otherwise. */
+/** Shared button styles for consistent navigation and actions across the site. */
 export function Button({ variant = "primary", size = "md", className, children, ...rest }: ButtonProps) {
   const classes = cn(baseClasses, variantClasses[variant], sizeClasses[size], className);
 

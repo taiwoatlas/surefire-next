@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Camera } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { galleryImages } from "@/data/gallery";
@@ -13,35 +14,19 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Church Life"
-        title="Gallery"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
-      />
+      <PageHeader eyebrow="Church life" title="Moments from our community." lede="A glimpse of worship, ministry, and the people who make this church family." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]} />
 
       <Section tone="paper">
         {galleryImages.length === 0 ? (
-          <EmptyState
-            title="Photography coming soon"
-            description="Images from worship, ministry and community life will be added here as they're confirmed."
-          />
+          <div className="mx-auto max-w-xl rounded-2xl border border-[#e6e2d8] bg-white p-6 text-center sm:p-8">
+            <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-[#e9eddf] text-[#315d43]"><Camera size={22} aria-hidden="true" /></span>
+            <div className="mt-4"><EmptyState title="Photography coming soon" description="Confirmed photos from worship, ministry and community life will appear here as they are added." /></div>
+          </div>
         ) : (
-          <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+          <div className="columns-1 gap-3 sm:columns-2 lg:columns-3">
             {galleryImages.map((img) => (
-              <a
-                key={img.src}
-                href={img.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block aspect-square overflow-hidden rounded-sm bg-stone"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 50vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <a key={img.src} href={img.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${img.alt}`} className="group relative mb-3 block break-inside-avoid overflow-hidden rounded-2xl bg-[#e9eddf]">
+                <div className="relative aspect-[4/3]"><Image src={img.src} alt={img.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" /></div>
               </a>
             ))}
           </div>
