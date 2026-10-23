@@ -8,8 +8,8 @@
   --surefire-charcoal: #191919;
   --surefire-red: #c8192e;
   --surefire-red-dark: #9f1022;
-  --surefire-paper: #f6f5f3;
-  --surefire-line: #e4e1df;
+  --surefire-paper: #F4F4F4;
+  --surefire-line: #E0E0E0;
 }
 
 @layer base {
