@@ -21,7 +21,7 @@ export function ServicesFeature() {
               <p className="flex items-center gap-2 pl-12 text-xs font-bold text-[#c8192e] sm:pl-0 sm:text-sm"><Clock3 size={14} />{service.time}</p>
             </div>
           ))}
-          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#E6E6E6] bg-[#faf9f8] px-4 py-3 sm:px-6"><p className="text-xs text-[#77716e]">Every gathering is an opportunity to encounter God and grow together.</p><Link href="/plan-your-visit" className="text-xs font-bold text-[#171717] underline decoration-[#c8192e] decoration-2 underline-offset-4">Get directions</Link></div>
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#E6E6E6] bg-[#F4F4F4] px-4 py-3 sm:px-6"><p className="text-xs text-[#77716e]">Every gathering is an opportunity to encounter God and grow together.</p><Link href="/plan-your-visit" className="text-xs font-bold text-[#171717] underline decoration-[#c8192e] decoration-2 underline-offset-4">Get directions</Link></div>
         </div>
       </div>
     </section>
