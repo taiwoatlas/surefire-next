@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Quote } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { church } from "@/data/church";
@@ -15,54 +15,35 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHeader eyebrow="Who We Are" title="Faith that transforms lives." lede={church.motto} breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]} />
-
+      <PageHeader eyebrow="Who we are" title="Faith with conviction. Purpose with impact." lede="A church committed to spiritual growth, empowered people and stronger communities." breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]} />
       <Section tone="paper">
-        <div className="grid gap-8 md:grid-cols-[1.1fr_.9fr] md:items-start md:gap-12">
+        <div className="grid gap-6 md:grid-cols-[1fr_.92fr] md:items-center md:gap-10">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Our vision</p>
-            <h2 className="mt-3 max-w-xl font-display text-3xl leading-tight tracking-tight text-[#18382b] sm:text-4xl">Transforming lives. Transforming communities.</h2>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-[#756f63]">
-              A church where people find hope, healing, and empowerment spiritually, socially, and economically to reach their full potential in Christ and help transform society.
-            </p>
-            <div className="mt-6 rounded-2xl bg-[#e9eddf] p-5 sm:p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#315d43]">Our mission</p>
-              <p className="mt-2 font-display text-xl leading-snug text-[#18382b]">To develop surefire leaders who champion positive change in their families, workplaces, and society.</p>
+            <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">Our story & calling</p>
+            <h2 className="mt-2 text-3xl font-black leading-[1.04] tracking-[-.045em] text-[#101010] sm:text-4xl">A house of faith.<br /><span className="text-[#c8192e]">A force for good.</span></h2>
+            <p className="mt-4 max-w-xl text-sm leading-6 text-[#686563]">The Surefire Christian Church of God exists to help people encounter Christ, discover their God-given purpose and carry that purpose into their homes, workplaces and communities.</p>
+            <div className="mt-5 border-l-[3px] border-[#c8192e] bg-white px-4 py-4">
+              <p className="text-[10px] font-bold uppercase tracking-[.18em] text-[#c8192e]">Our mission</p>
+              <p className="mt-1.5 text-base font-bold leading-snug text-[#171717]">To develop surefire leaders who champion positive change in their families, workplaces, and society.</p>
             </div>
+            <div className="mt-5 flex flex-wrap gap-3"><Link href="/plan-your-visit" className="inline-flex min-h-11 items-center gap-2 rounded-md bg-[#c8192e] px-4 text-sm font-bold text-white hover:bg-[#a81023]">Visit the church <ArrowUpRight size={15} /></Link><Link href="/ministries" className="inline-flex min-h-11 items-center gap-2 border border-[#d8d4d1] px-4 text-sm font-bold text-[#171717] hover:border-[#c8192e]">Explore ministries</Link></div>
           </div>
-          <div className="relative min-h-[260px] overflow-hidden rounded-2xl bg-[#10291f] sm:min-h-[330px]">
-            <Image src="/images/church/building-chapel-facade.jpg" alt="Living Wonders Chapel, home of The Surefire Christian Church of God" fill sizes="(min-width: 768px) 45vw, 100vw" className="object-cover" />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10291f]/90 to-transparent p-5 pt-16 text-white">
-              <p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#e7cb87]">Established {church.established}</p>
-              <p className="mt-1 font-display text-xl">{church.founder}</p>
-            </div>
+          <div className="grid grid-cols-[1.15fr_.85fr] items-end gap-3">
+            <div className="relative h-[280px] overflow-hidden rounded-sm bg-[#191919] sm:h-[340px]"><Image src="/images/church/building-chapel-facade.jpg" alt="The Surefire Christian Church chapel" fill sizes="(min-width: 768px) 36vw, 65vw" className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" /><div className="absolute bottom-4 left-4 right-4 text-white"><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#ff7a88]">Established</p><p className="mt-1 text-lg font-black">{church.established}</p></div></div>
+            <div className="relative mb-8 h-[190px] overflow-hidden rounded-sm border-b-4 border-[#c8192e] bg-[#191919] sm:h-[230px]"><Image src="/images/church/building-gate-daylight.jpg" alt="The church grounds" fill sizes="(min-width: 768px) 26vw, 45vw" className="object-cover" /><div className="absolute inset-0 bg-black/15" /><div className="absolute inset-x-0 bottom-0 bg-black/75 p-3 text-white"><p className="text-[9px] font-bold uppercase tracking-[.14em] text-[#ff7a88]">Founder & pastor</p><p className="mt-1 text-sm font-extrabold">{church.founder}</p></div></div>
           </div>
         </div>
       </Section>
-
       <Section tone="stone">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">What guides us</p><h2 className="mt-2 font-display text-3xl text-[#18382b]">Our values</h2></div>
-          <p className="max-w-md text-sm leading-6 text-[#756f63]">The principles that shape our worship, relationships, service, and community impact.</p>
-        </div>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-          {church.values.map((value, i) => (
-            <article key={value} className="rounded-2xl border border-[#e2dfd5] bg-white p-5">
-              <p className="font-mono text-[10px] tracking-[.16em] text-[#8b6b2c]">0{i + 1}</p>
-              <h3 className="mt-3 font-display text-xl text-[#18382b]">{value}</h3>
-            </article>
-          ))}
+        <div className="grid gap-5 md:grid-cols-[.65fr_1.35fr] md:items-center md:gap-8">
+          <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">What shapes us</p><h2 className="mt-2 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Our values in action.</h2><p className="mt-2 text-sm leading-6 text-[#686563]">Principles that shape how we worship, lead, serve and treat people.</p></div>
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-[#dedad7] bg-[#dedad7] sm:grid-cols-4">{church.values.map((value, i) => <article key={value} className="bg-white p-4 sm:p-5"><p className="text-[10px] font-bold tracking-[.16em] text-[#c8192e]">0{i + 1}</p><h3 className="mt-2 text-lg font-black text-[#171717]">{value}</h3></article>)}</div>
         </div>
       </Section>
-
       <Section tone="paper">
-        <div className="grid gap-8 md:grid-cols-[.7fr_1.3fr] md:items-start">
-          <div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Our foundation</p><h2 className="mt-2 font-display text-3xl text-[#18382b]">Grounded in the Word</h2><p className="mt-3 text-sm leading-6 text-[#756f63]">Explore Scripture as part of your walk of faith.</p></div>
-          <div className="rounded-2xl border border-[#e6e2d8] bg-white p-4 sm:p-6"><ScriptureReader /></div>
-        </div>
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-[#10291f] p-5 text-white sm:p-6">
-          <div><p className="font-display text-xl">Find your place in the community.</p><p className="mt-1 text-sm text-white/65">Join us for a service or get to know our ministries.</p></div>
-          <Link href="/plan-your-visit" className="inline-flex min-h-10 items-center gap-2 rounded-full bg-[#d8bb76] px-4 text-sm font-semibold text-[#10291f]">Plan your visit <ArrowUpRight size={15} aria-hidden="true" /></Link>
+        <div className="grid gap-5 md:grid-cols-[.7fr_1.3fr] md:items-start">
+          <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">Our foundation</p><h2 className="mt-2 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Grounded in the Word.</h2><p className="mt-2 text-sm leading-6 text-[#686563]">Scripture remains central to our faith, decisions and everyday walk with God.</p><div className="mt-5 flex gap-3 border-t border-[#e4e1df] pt-4"><Quote size={20} className="shrink-0 text-[#c8192e]" /><p className="text-sm font-semibold leading-6 text-[#171717]">We believe transformed lives become a testimony that reaches far beyond the church walls.</p></div></div>
+          <div className="rounded-xl border border-[#e4e1df] bg-white p-4 sm:p-5"><ScriptureReader /></div>
         </div>
       </Section>
     </>
