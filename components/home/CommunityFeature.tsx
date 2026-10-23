@@ -20,7 +20,7 @@ export function CommunityFeature() {
           <Link href="/ministries" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-md bg-[#101010] px-4 text-sm font-bold text-white transition hover:bg-[#c8192e]">Explore our ministries <ArrowUpRight size={15} /></Link>
         </div>
         <div className="grid grid-cols-2 gap-2 sm:gap-3">
-          {moments.map((moment, i) => (
+          {moments.map((moment) => (
             <Link key={moment.title} href="/ministries" className={`group relative overflow-hidden rounded-sm bg-[#191919] ${moment.className}`}>
               <Image src={moment.src} alt={`${moment.title} ministry at The Surefire Christian Church of God`} fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover transition duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent" />
