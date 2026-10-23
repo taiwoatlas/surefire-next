@@ -16,13 +16,13 @@ export default function SermonsPage() {
 
       <Section tone="paper">
         <div className="grid gap-6 md:grid-cols-[.6fr_1.4fr] md:items-start">
-          <div className="rounded-2xl bg-[#10291f] p-5 text-white sm:p-6">
-            <span className="grid size-10 place-items-center rounded-xl border border-[#d8bb76]/25 bg-white/[.05] text-[#e7cb87]"><BookOpen size={19} aria-hidden="true" /></span>
+          <div className="rounded-2xl bg-[#101010] p-5 text-white sm:p-6">
+            <span className="grid size-10 place-items-center rounded-xl border border-[#c8192e]/25 bg-white/[.05] text-[#ff7a88]"><BookOpen size={19} aria-hidden="true" /></span>
             <h2 className="mt-4 font-display text-2xl">The sermon library</h2>
             <p className="mt-2 text-sm leading-6 text-white/65">Search teachings by topic, speaker, series, or Bible passage.</p>
-            <p className="mt-5 font-mono text-[10px] uppercase tracking-[.16em] text-[#e7cb87]">Learn · Reflect · Grow</p>
+            <p className="mt-5 font-mono text-[10px] uppercase tracking-[.16em] text-[#ff7a88]">Learn · Reflect · Grow</p>
           </div>
-          <div className="min-w-0 rounded-2xl border border-[#e6e2d8] bg-white p-4 sm:p-6"><SermonSearch /></div>
+          <div className="min-w-0 rounded-2xl border border-[#e4e1df] bg-white p-4 sm:p-6"><SermonSearch /></div>
         </div>
       </Section>
     </>
