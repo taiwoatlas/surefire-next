@@ -19,7 +19,7 @@ export function Header() {
 
         <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-5">
-            {primaryNav.slice(0, 7).map((item) => (
+            {primaryNav.slice(1, 6).map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="whitespace-nowrap text-[11px] font-medium text-white/75 transition-colors hover:text-[#e7cb87]">
                   {item.label}
