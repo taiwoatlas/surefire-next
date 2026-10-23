@@ -18,22 +18,22 @@ export default function ContactPage() {
 
       <Section tone="paper">
         <div className="grid gap-3 md:grid-cols-3">
-          <article className="rounded-2xl border border-[#e6e2d8] bg-white p-5 sm:p-6">
-            <span className="grid size-10 place-items-center rounded-xl bg-[#e9eddf] text-[#315d43]"><MapPin size={18} aria-hidden="true" /></span>
-            <h2 className="mt-4 font-display text-xl text-[#18382b]">Visit us</h2>
-            <p className="mt-2 text-sm leading-6 text-[#756f63]">{church.address}</p>
+          <article className="rounded-2xl border border-[#e4e1df] bg-white p-5 sm:p-6">
+            <span className="grid size-10 place-items-center rounded-xl bg-[#fbe9ec] text-[#c8192e]"><MapPin size={18} aria-hidden="true" /></span>
+            <h2 className="mt-4 font-display text-xl text-[#101010]">Visit us</h2>
+            <p className="mt-2 text-sm leading-6 text-[#686563]">{church.address}</p>
           </article>
-          <article className="rounded-2xl border border-[#e6e2d8] bg-white p-5 sm:p-6">
-            <span className="grid size-10 place-items-center rounded-xl bg-[#e9eddf] text-[#315d43]"><Phone size={18} aria-hidden="true" /></span>
-            <h2 className="mt-4 font-display text-xl text-[#18382b]">Call the church</h2>
-            <a href={`tel:${church.phone.church.replace(/\s/g, "")}`} className="mt-2 inline-block text-sm font-semibold text-[#315d43]">{church.phone.church}</a>
-            <p className="mt-1 text-xs text-[#756f63]">For enquiries and general information</p>
+          <article className="rounded-2xl border border-[#e4e1df] bg-white p-5 sm:p-6">
+            <span className="grid size-10 place-items-center rounded-xl bg-[#fbe9ec] text-[#c8192e]"><Phone size={18} aria-hidden="true" /></span>
+            <h2 className="mt-4 font-display text-xl text-[#101010]">Call the church</h2>
+            <a href={`tel:${church.phone.church.replace(/\s/g, "")}`} className="mt-2 inline-block text-sm font-semibold text-[#c8192e]">{church.phone.church}</a>
+            <p className="mt-1 text-xs text-[#686563]">For enquiries and general information</p>
           </article>
-          <article className="rounded-2xl border border-[#e6e2d8] bg-white p-5 sm:p-6">
-            <span className="grid size-10 place-items-center rounded-xl bg-[#e9eddf] text-[#315d43]"><MessageCircle size={18} aria-hidden="true" /></span>
-            <h2 className="mt-4 font-display text-xl text-[#18382b]">WhatsApp</h2>
-            <a href={`https://wa.me/${church.whatsapp.church}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold text-[#315d43]">Start a conversation →</a>
-            <p className="mt-1 text-xs text-[#756f63]">Send us a message anytime</p>
+          <article className="rounded-2xl border border-[#e4e1df] bg-white p-5 sm:p-6">
+            <span className="grid size-10 place-items-center rounded-xl bg-[#fbe9ec] text-[#c8192e]"><MessageCircle size={18} aria-hidden="true" /></span>
+            <h2 className="mt-4 font-display text-xl text-[#101010]">WhatsApp</h2>
+            <a href={`https://wa.me/${church.whatsapp.church}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold text-[#c8192e]">Start a conversation →</a>
+            <p className="mt-1 text-xs text-[#686563]">Send us a message anytime</p>
           </article>
         </div>
       </Section>
@@ -41,23 +41,23 @@ export default function ContactPage() {
       <Section tone="stone">
         <div className="grid gap-8 md:grid-cols-[1.1fr_.9fr] md:items-start">
           <div className="rounded-2xl border border-[#e2dfd5] bg-white p-5 sm:p-7">
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Send a message</p>
-            <h2 className="mt-2 font-display text-2xl text-[#18382b]">How can we help?</h2>
+            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#c8192e]">Send a message</p>
+            <h2 className="mt-2 font-display text-2xl text-[#101010]">How can we help?</h2>
             <div className="mt-5"><ContactForm /></div>
           </div>
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Gather with us</p>
-            <h2 className="mt-2 font-display text-2xl text-[#18382b]">Service times</h2>
+            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#c8192e]">Gather with us</p>
+            <h2 className="mt-2 font-display text-2xl text-[#101010]">Service times</h2>
             <div className="mt-4 overflow-hidden rounded-2xl border border-[#e2dfd5] bg-white">
-              {services.map((s) => <div key={s.key} className="flex items-start justify-between gap-4 border-b border-[#e6e2d8] p-4 last:border-0"><div><p className="text-sm font-semibold text-[#18382b]">{s.name}</p><p className="mt-1 text-xs text-[#756f63]">{s.day}</p></div><p className="flex shrink-0 items-center gap-1.5 text-xs font-semibold text-[#315d43]"><Clock3 size={13} aria-hidden="true" />{s.time}</p></div>)}
+              {services.map((s) => <div key={s.key} className="flex items-start justify-between gap-4 border-b border-[#e4e1df] p-4 last:border-0"><div><p className="text-sm font-semibold text-[#101010]">{s.name}</p><p className="mt-1 text-xs text-[#686563]">{s.day}</p></div><p className="flex shrink-0 items-center gap-1.5 text-xs font-semibold text-[#c8192e]"><Clock3 size={13} aria-hidden="true" />{s.time}</p></div>)}
             </div>
           </div>
         </div>
       </Section>
 
       <Section tone="paper">
-        <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Location</p><h2 className="mt-2 font-display text-3xl text-[#18382b]">Find the church</h2></div><p className="max-w-md text-sm leading-6 text-[#756f63]">{church.address}</p></div>
-        <div className="mt-5 overflow-hidden rounded-2xl border border-[#e6e2d8]"><ChurchLocator /></div>
+        <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#c8192e]">Location</p><h2 className="mt-2 font-display text-3xl text-[#101010]">Find the church</h2></div><p className="max-w-md text-sm leading-6 text-[#686563]">{church.address}</p></div>
+        <div className="mt-5 overflow-hidden rounded-2xl border border-[#e4e1df]"><ChurchLocator /></div>
       </Section>
     </>
   );
