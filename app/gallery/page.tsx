@@ -18,14 +18,14 @@ export default function GalleryPage() {
 
       <Section tone="paper">
         {galleryImages.length === 0 ? (
-          <div className="mx-auto max-w-xl rounded-2xl border border-[#e4e1df] bg-white p-6 text-center sm:p-8">
-            <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-[#fbe9ec] text-[#c8192e]"><Camera size={22} aria-hidden="true" /></span>
+          <div className="mx-auto max-w-xl rounded-2xl border border-[#E0E0E0] bg-white p-6 text-center sm:p-8">
+            <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-[#FCEBED] text-[#c8192e]"><Camera size={22} aria-hidden="true" /></span>
             <div className="mt-4"><EmptyState title="Photography coming soon" description="Confirmed photos from worship, ministry and community life will appear here as they are added." /></div>
           </div>
         ) : (
           <div className="columns-1 gap-3 sm:columns-2 lg:columns-3">
             {galleryImages.map((img) => (
-              <a key={img.src} href={img.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${img.alt}`} className="group relative mb-3 block break-inside-avoid overflow-hidden rounded-2xl bg-[#fbe9ec]">
+              <a key={img.src} href={img.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${img.alt}`} className="group relative mb-3 block break-inside-avoid overflow-hidden rounded-2xl bg-[#FCEBED]">
                 <div className="relative aspect-[4/3]"><Image src={img.src} alt={img.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" /></div>
               </a>
             ))}
