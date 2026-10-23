@@ -5,7 +5,7 @@ export function Card({ className, children }: { readonly className?: string; rea
   return (
     <div
       className={cn(
-        "spotlight-card relative rounded-sm border border-line bg-charcoal p-8 shadow-sm transition-transform duration-300 ease-church hover:-translate-y-1.5",
+        "spotlight-card relative rounded-2xl border border-line bg-white p-5 shadow-sm transition-all duration-200 ease-church hover:-translate-y-0.5 hover:border-gold hover:shadow-soft sm:p-6",
         className,
       )}
     >
