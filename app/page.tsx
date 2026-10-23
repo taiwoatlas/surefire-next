@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { VisionStatement } from "@/components/home/VisionStatement";
 import { ServicesFeature } from "@/components/home/ServicesFeature";
+import { CommunityFeature } from "@/components/home/CommunityFeature";
 import { PartnerFeature } from "@/components/home/PartnerFeature";
 import { VerseOfTheDay } from "@/components/scripture/VerseOfTheDay";
 import { Section } from "@/components/layout/Section";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Hero />
       <VisionStatement />
       <ServicesFeature />
+      <CommunityFeature />
       <Section tone="ink" className="py-8 md:py-10">
         <VerseOfTheDay />
       </Section>
