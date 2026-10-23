@@ -9,7 +9,7 @@ export function VisionStatement() {
           <p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#c8192e]">Our mandate</p>
           <h2 className="mt-2 text-2xl font-black tracking-[-.04em] sm:text-3xl">Empowering Lives.<br />Building Kingdom.</h2>
         </div>
-        <div className="md:border-l md:border-[#e4e1df] md:pl-10">
+        <div className="md:border-l md:border-[#E0E0E0] md:pl-10">
           <p className="max-w-3xl text-lg font-semibold leading-snug tracking-[-.025em] sm:text-xl md:text-2xl">We are here to help people find hope in Christ, grow into their purpose, and create meaningful change in their families and communities.</p>
           <Link href="/about" className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#c8192e] hover:text-[#9f1022]">Discover who we are <ArrowUpRight size={15} /></Link>
         </div>
