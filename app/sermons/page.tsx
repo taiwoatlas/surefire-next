@@ -22,7 +22,7 @@ export default function SermonsPage() {
             <p className="mt-2 text-sm leading-6 text-white/65">Search teachings by topic, speaker, series, or Bible passage.</p>
             <p className="mt-5 font-mono text-[10px] uppercase tracking-[.16em] text-[#ff7a88]">Learn · Reflect · Grow</p>
           </div>
-          <div className="min-w-0 rounded-2xl border border-[#e4e1df] bg-white p-4 sm:p-6"><SermonSearch /></div>
+          <div className="min-w-0 rounded-2xl border border-[#E0E0E0] bg-white p-4 sm:p-6"><SermonSearch /></div>
         </div>
       </Section>
     </>
