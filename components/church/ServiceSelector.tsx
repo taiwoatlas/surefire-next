@@ -13,18 +13,18 @@ export function ServiceSelector() {
       <div className="flex flex-wrap gap-2" role="tablist" aria-label="Services">
         {services.map((s) => (
           <button key={s.key} role="tab" aria-selected={s.key === activeKey} type="button" onClick={() => setActiveKey(s.key)}
-            className={`min-h-10 rounded-full border px-4 py-2 text-xs font-semibold transition-colors ${s.key === activeKey ? "border-[#315d43] bg-[#315d43] text-white" : "border-[#e6e2d8] bg-white text-[#18382b] hover:border-[#c7ad6d]"}`}>
+            className={`min-h-10 rounded-full border px-4 py-2 text-xs font-semibold transition-colors ${s.key === activeKey ? "border-[#c8192e] bg-[#c8192e] text-white" : "border-[#e4e1df] bg-white text-[#101010] hover:border-[#c8192e]"}`}>
             {s.name}
           </button>
         ))}
       </div>
 
-      <div role="tabpanel" className="mt-4 flex flex-col gap-4 rounded-2xl border border-[#e6e2d8] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <div role="tabpanel" className="mt-4 flex flex-col gap-4 rounded-2xl border border-[#e4e1df] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
         <div className="flex items-start gap-3">
-          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#e9eddf] text-[#315d43]"><CalendarDays size={18} aria-hidden="true" /></span>
-          <div><p className="font-display text-xl text-[#18382b]">{active.name}</p><p className="mt-1 text-sm text-[#756f63]">{active.day}</p></div>
+          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#fbe9ec] text-[#c8192e]"><CalendarDays size={18} aria-hidden="true" /></span>
+          <div><p className="font-display text-xl text-[#101010]">{active.name}</p><p className="mt-1 text-sm text-[#686563]">{active.day}</p></div>
         </div>
-        <p className="flex items-center gap-2 text-sm font-semibold text-[#315d43]"><Clock3 size={16} aria-hidden="true" />{active.time}</p>
+        <p className="flex items-center gap-2 text-sm font-semibold text-[#c8192e]"><Clock3 size={16} aria-hidden="true" />{active.time}</p>
       </div>
     </div>
   );
