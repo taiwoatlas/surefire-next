@@ -4,32 +4,24 @@ import { services } from "@/data/church";
 
 export function ServicesFeature() {
   return (
-    <section className="bg-white py-12 sm:py-14">
-      <div className="mx-auto max-w-[1320px] px-5 sm:px-8 md:px-10">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8b6b2c]">Make time for faith</p>
-            <h2 className="mt-2 font-display text-3xl tracking-tight text-[#18382b] sm:text-4xl">Gather with us</h2>
-          </div>
-          <Link href="/services" className="inline-flex items-center gap-1.5 pb-1 text-sm font-semibold text-[#315d43] hover:text-[#8b6b2c]">
-            View all services <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
+    <section className="bg-[#f1efed] py-8 sm:py-10">
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-8 md:px-10">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div><p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#c8192e]">Worship & fellowship</p><h2 className="mt-1.5 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Make time to gather.</h2></div>
+          <Link href="/services" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c8192e] hover:text-[#9f1022]">Service details <ArrowUpRight size={14} /></Link>
         </div>
-
-        <div className="mt-6 grid gap-3 md:grid-cols-3">
+        <div className="mt-5 overflow-hidden rounded-xl border border-[#dedad7] bg-white shadow-[0_8px_28px_rgba(0,0,0,.04)]">
+          <div className="grid bg-[#171717] px-4 py-3 text-[10px] font-bold uppercase tracking-[.18em] text-white/55 sm:grid-cols-[1.1fr_.8fr_1fr] sm:px-6">
+            <span>Gathering</span><span className="hidden sm:block">Day</span><span className="hidden sm:block">Time</span>
+          </div>
           {services.map((service, index) => (
-            <article key={service.key} className="group rounded-2xl border border-[#e6e2d8] bg-[#fbfaf6] p-5 transition duration-200 hover:-translate-y-0.5 hover:border-[#c7ad6d] hover:shadow-[0_12px_32px_rgba(24,56,43,.08)] sm:p-6">
-              <div className="flex items-center justify-between">
-                <span className="grid size-9 place-items-center rounded-xl bg-[#e9eddf] text-[#315d43]">
-                  {index === 0 ? <CalendarDays size={17} /> : <Clock3 size={17} />}
-                </span>
-                <span className="font-mono text-[10px] tracking-[.16em] text-[#9a8b6b]">0{index + 1}</span>
-              </div>
-              <h3 className="mt-4 font-display text-xl text-[#18382b]">{service.name}</h3>
-              <p className="mt-1.5 text-sm font-semibold text-[#315d43]">{service.day}</p>
-              <p className="mt-1 text-sm text-[#756f63]">{service.time}</p>
-            </article>
+            <div key={service.key} className="grid gap-2 border-t border-[#ebe8e6] px-4 py-4 sm:grid-cols-[1.1fr_.8fr_1fr] sm:items-center sm:px-6">
+              <div className="flex items-center gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#fbe9ec] text-[#c8192e]"><CalendarDays size={16} /></span><div><p className="text-sm font-extrabold text-[#171717]">{service.name}</p><p className="mt-0.5 text-[11px] text-[#77716e] sm:hidden">{service.day}</p></div></div>
+              <p className="hidden text-sm font-semibold text-[#4e4a48] sm:block">{service.day}</p>
+              <p className="flex items-center gap-2 pl-12 text-xs font-bold text-[#c8192e] sm:pl-0 sm:text-sm"><Clock3 size={14} />{service.time}</p>
+            </div>
           ))}
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#ebe8e6] bg-[#faf9f8] px-4 py-3 sm:px-6"><p className="text-xs text-[#77716e]">Every gathering is an opportunity to encounter God and grow together.</p><Link href="/plan-your-visit" className="text-xs font-bold text-[#171717] underline decoration-[#c8192e] decoration-2 underline-offset-4">Get directions</Link></div>
         </div>
       </div>
     </section>
