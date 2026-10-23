@@ -45,7 +45,7 @@ export default function MinistriesPage() {
       <Section tone="stone">
         <div className="grid gap-5 md:grid-cols-[.65fr_1.35fr] md:items-start">
           <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#c8192e]">Ministry directory</p><h2 className="mt-2 text-2xl font-black tracking-[-.04em] text-[#101010] sm:text-3xl">Find the right team.</h2><p className="mt-2 text-sm leading-6 text-[#686563]">Search all ministries and find a group that fits your season, interests and gifts.</p></div>
-          <div className="rounded-xl border border-[#dedad7] bg-white p-4 sm:p-5"><MinistryExplorer /></div>
+          <div className="rounded-xl border border-[#E0E0E0] bg-white p-4 sm:p-5"><MinistryExplorer /></div>
         </div>
       </Section>
     </>
