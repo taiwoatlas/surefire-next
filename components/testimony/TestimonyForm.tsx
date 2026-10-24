@@ -15,21 +15,21 @@ export function TestimonyForm() {
         <label htmlFor="tName" className="text-xs text-white/75">
           Name
         </label>
-        <input id="tName" name="name" type="text" required className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm" />
+        <input id="tName" name="name" type="text" required className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm text-ink placeholder:text-gray" />
       </div>
 
       <div className="mt-4">
         <label htmlFor="tPhone" className="text-xs text-gray">
           Phone
         </label>
-        <input id="tPhone" name="phone" type="tel" required className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm" />
+        <input id="tPhone" name="phone" type="tel" required className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm text-ink placeholder:text-gray" />
       </div>
 
       <div className="mt-4">
         <label htmlFor="tTestimony" className="text-xs text-gray">
           Share what God has done
         </label>
-        <textarea id="tTestimony" name="testimony" required rows={6} className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm" />
+        <textarea id="tTestimony" name="testimony" required rows={6} className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm text-ink placeholder:text-gray" />
       </div>
 
       <label className="mt-4 flex items-start gap-2 text-sm text-white/75">
