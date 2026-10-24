@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
-import { empowerment, governance } from "@/data/empowerment";
+import { empowerment } from "@/data/empowerment";
 import { EcosystemMap } from "@/components/empowerment/EcosystemMap";
 
 export const metadata: Metadata = {
@@ -36,13 +36,7 @@ export default function EmpowermentPage() {
       </Section>
 
       <Section tone="paper">
-        <div className="grid gap-8 md:grid-cols-[.7fr_1.3fr]">
-          <div><p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#c8192e]">Governance</p><h2 className="mt-2 font-display text-3xl text-[#101010]">Built with structure</h2></div>
-          <div className="divide-y divide-[#E0E0E0] rounded-2xl border border-[#E0E0E0] bg-white px-5">
-            {governance.map((g) => <div key={g.level} className="py-4"><h3 className="font-display text-lg text-[#101010]">{g.level}</h3><p className="mt-1 text-sm leading-6 text-[#686563]">{g.desc}</p></div>)}
-          </div>
-        </div>
-        <div className="mt-7 flex flex-col gap-4 rounded-2xl bg-[#F4F4F4] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"><div><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#c8192e]">Find your next step</p><h2 className="mt-2 font-display text-xl text-[#101010]">Not sure where to start?</h2><p className="mt-1 text-sm text-[#686563]">Take the short assessment to help identify a suitable pathway.</p></div><Link href="/empowerment-assessment" className="inline-flex min-h-11 items-center justify-center gap-2 self-start rounded-full bg-[#c8192e] px-5 text-sm font-semibold text-white transition hover:bg-[#101010]">Start assessment <ArrowUpRight size={15} aria-hidden="true" /></Link></div>
+        <div className="flex flex-col gap-4 rounded-2xl bg-[#F4F4F4] p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"><div><p className="font-mono text-[10px] uppercase tracking-[.18em] text-[#c8192e]">Find your next step</p><h2 className="mt-2 font-display text-xl text-[#101010]">Not sure where to start?</h2><p className="mt-1 text-sm text-[#686563]">Take the short assessment to help identify a suitable pathway.</p></div><Link href="/empowerment-assessment" className="inline-flex min-h-11 items-center justify-center gap-2 self-start rounded-full bg-[#c8192e] px-5 text-sm font-semibold text-white transition hover:bg-[#101010]">Start assessment <ArrowUpRight size={15} aria-hidden="true" /></Link></div>
       </Section>
     </>
   );
