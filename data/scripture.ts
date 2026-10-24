@@ -10,7 +10,7 @@ export interface Verse {
  * "Living Wonders" and "Empowering Lives, Building Kingdom".
  * KJV wording is used throughout.
  */
-const meditations: Record<string, string> = {
+const meditations = {
   "Living Wonders": "God has not called you to live as a spiritual spectator. Let your life point people toward His reality. Ask Him to make your words, choices and service a clear witness of His power today.",
   "Equipping Believers": "Grace is not only for personal comfort; it equips you to serve. Identify one gift God has placed in you and put it to work to strengthen someone else today.",
   "Impact and Service": "Let your faith become visible through practical goodness. Choose one action that brings help, dignity or hope to another person, and let the Father receive the glory.",
@@ -41,7 +41,7 @@ const meditations: Record<string, string> = {
   "Trust and Direction": "Trust is practised through decisions, not only declared in words. Bring your plans before God, seek wise counsel and take the next honest step without pretending to know everything.",
   "Purpose and Hope": "God can work through complicated seasons without calling evil good. Keep faith, choose what is right in the present and remain open to the good He can bring from what you cannot control.",
   "The Love of God": "The foundation is God's love, revealed in Christ. Receive that love with humility, and let it loosen fear and move you toward love for God and your neighbour.",
-};
+} satisfies Record<string, string>;
 
 export const verses: readonly Verse[] = [
   { reference: "Isaiah 8:18", text: "Behold, I and the children whom the LORD hath given me are for signs and for wonders in Israel from the LORD of hosts, which dwelleth in mount Zion.", theme: "Living Wonders", meditation: meditations["Living Wonders"] },
