@@ -45,8 +45,8 @@ export function MobileNav() {
     <div id="mobile-nav-panel" ref={panelRef} role="dialog" aria-modal="true" aria-label="Site navigation" className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-[#101010] px-5 py-5 text-white sm:px-8">
       <div className="flex items-center justify-between border-b border-white/10 pb-5">
         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
-          <span className="grid size-10 place-items-center rounded-xl bg-[#c8192e] font-display text-xl font-semibold text-[#101010]">S</span>
-          <span><span className="block font-display text-base font-semibold">Surefire Christian Church</span><span className="mt-1 block font-mono text-[9px] uppercase tracking-[.22em] text-[#c8192e]">Living Wonders</span></span>
+          <span className="grid size-10 place-items-center rounded-xl bg-[#c8192e] font-display text-xl font-semibold text-white">S</span>
+          <span><span className="block font-display text-base font-semibold">Surefire Christian Church</span><span className="mt-1 block font-mono text-[9px] uppercase tracking-[.22em] text-[#ff7a88]">Living Wonders</span></span>
         </Link>
         <button type="button" aria-label="Close menu" onClick={() => setOpen(false)} className="rounded-full border border-white/20 p-2.5 transition hover:border-[#c8192e] hover:text-[#ff7a88]"><X aria-hidden="true" /></button>
       </div>

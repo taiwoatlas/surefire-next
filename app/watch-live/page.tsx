@@ -25,7 +25,7 @@ export default function WatchLivePage() {
               <span className="grid size-12 place-items-center rounded-2xl border border-white/15 bg-white/5 text-[#ff7a88]"><Radio size={22} aria-hidden="true" /></span>
               <h2 className="mt-4 font-display text-2xl sm:text-3xl">No live stream at the moment</h2>
               <p className="mt-2 max-w-md text-sm leading-6 text-white/65">Check the church Facebook page for service broadcasts and announcements. This website will be updated when a dedicated live-stream link is available.</p>
-              <a href={church.facebook} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#c8192e] px-5 text-sm font-semibold text-[#101010]">Visit Facebook <ArrowUpRight size={15} aria-hidden="true" /></a>
+              <a href={church.facebook} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-[#c8192e] px-5 text-sm font-semibold text-white">Visit Facebook <ArrowUpRight size={15} aria-hidden="true" /></a>
             </div>
           </div>
           <aside className="rounded-2xl border border-[#E0E0E0] bg-[#F4F4F4] p-5 sm:p-6">

@@ -36,7 +36,7 @@ export function SermonPlayer({ sermon }: { readonly sermon: Sermon }) {
   }
 
   return (
-    <div className="rounded-sm border border-line bg-charcoal p-6">
+    <div className="rounded-sm border border-[#454545] bg-[#191919] p-6 text-white">
       <audio
         ref={mediaRef}
         src={sermon.mediaUrl}
@@ -64,7 +64,7 @@ export function SermonPlayer({ sermon }: { readonly sermon: Sermon }) {
             aria-label="Seek"
             className="w-full accent-red"
           />
-          <div className="mt-1 flex justify-between font-mono text-xs text-gray">
+          <div className="mt-1 flex justify-between font-mono text-xs text-white/70">
             <span>{formatTime(current)}</span>
             <span>{formatTime(duration)}</span>
           </div>

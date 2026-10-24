@@ -27,10 +27,10 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-sm border border-line bg-charcoal p-8">
+    <form onSubmit={handleSubmit} className="rounded-sm border border-[#454545] bg-[#191919] p-5 text-white sm:p-8">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="ctName" className="text-xs text-gray">
+          <label htmlFor="ctName" className="text-xs text-white/75">
             Name
           </label>
           <input id="ctName" name="name" type="text" required className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm" />

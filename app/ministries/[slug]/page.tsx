@@ -50,8 +50,8 @@ export default async function MinistryDetailPage({ params }: { params: Promise<{
           <p className="font-mono text-xs uppercase tracking-wide text-red">Other Ministries</p>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {others.map((m) => (
-              <a key={m.slug} href={`/ministries/${m.slug}`} className="rounded-sm border border-line bg-charcoal p-6 transition-transform hover:-translate-y-1">
-                <h3 className="font-display text-lg">{m.name}</h3>
+              <a key={m.slug} href={`/ministries/${m.slug}`} className="rounded-sm border border-[#454545] bg-[#191919] p-6 text-white transition-transform hover:-translate-y-1 hover:border-[#c8192e]">
+                <h3 className="font-display text-lg font-bold text-white">{m.name}</h3>
               </a>
             ))}
           </div>

@@ -25,7 +25,7 @@ export function SermonSearch() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search by speaker, series, or Scripture…"
-        className="w-full rounded-sm border border-line bg-charcoal px-4 py-3 text-sm"
+        className="w-full rounded-sm border border-[#454545] bg-[#191919] px-4 py-3 text-sm text-white placeholder:text-white/50 focus:border-[#c8192e] focus:outline-none"
       />
 
       <div className="mt-6">
@@ -39,9 +39,9 @@ export function SermonSearch() {
         ) : (
           <div className="grid gap-4 md:grid-cols-3">
             {filtered.map((s) => (
-              <Link key={s.slug} href={`/sermons/${s.slug}`} className="rounded-sm border border-line bg-charcoal p-6">
-                <h3 className="font-display text-xl">{s.title}</h3>
-                <p className="mt-2 text-sm text-gray">{s.speaker}</p>
+              <Link key={s.slug} href={`/sermons/${s.slug}`} className="rounded-sm border border-[#454545] bg-[#191919] p-6 text-white transition hover:border-[#c8192e]">
+                <h3 className="font-display text-xl font-bold text-white">{s.title}</h3>
+                <p className="mt-2 text-sm text-white/70">{s.speaker}</p>
               </Link>
             ))}
           </div>

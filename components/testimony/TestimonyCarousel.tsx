@@ -19,9 +19,9 @@ export function TestimonyCarousel() {
   const testimony = publishedTestimonies[index]!;
 
   return (
-    <div className="rounded-sm border border-line bg-charcoal p-8 text-center">
+    <div className="rounded-sm border border-[#454545] bg-[#191919] p-8 text-center text-white">
       <p className="font-display text-xl italic leading-relaxed">&ldquo;{testimony.text}&rdquo;</p>
-      <p className="mt-4 text-sm text-gray">— {testimony.name}</p>
+      <p className="mt-4 text-sm text-white/70">— {testimony.name}</p>
       {publishedTestimonies.length > 1 && (
         <div className="mt-6 flex justify-center gap-2">
           {publishedTestimonies.map((_, i) => (

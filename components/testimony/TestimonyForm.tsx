@@ -10,9 +10,9 @@ export function TestimonyForm() {
   const { status, waLink, handleSubmit } = useWhatsAppForm("church", TEMPLATE);
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-sm border border-line bg-charcoal p-8">
+    <form onSubmit={handleSubmit} className="rounded-sm border border-[#454545] bg-[#191919] p-5 text-white sm:p-8">
       <div>
-        <label htmlFor="tName" className="text-xs text-gray">
+        <label htmlFor="tName" className="text-xs text-white/75">
           Name
         </label>
         <input id="tName" name="name" type="text" required className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm" />
@@ -32,7 +32,7 @@ export function TestimonyForm() {
         <textarea id="tTestimony" name="testimony" required rows={6} className="mt-1 w-full rounded-sm border border-line bg-paper px-3 py-2 text-sm" />
       </div>
 
-      <label className="mt-4 flex items-start gap-2 text-sm text-gray">
+      <label className="mt-4 flex items-start gap-2 text-sm text-white/75">
         <input name="consent" type="hidden" value="No" />
         <input name="consent" type="checkbox" value="Yes" className="mt-1" />
         I&apos;m okay with the church sharing this testimony publicly (on the website or in service).

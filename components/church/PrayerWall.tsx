@@ -15,9 +15,9 @@ export function PrayerWall() {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {publicPrayers.map((p, i) => (
-        <div key={i} className="rounded-sm border border-line bg-charcoal p-6">
-          <p className="text-sm text-gray">{p.request}</p>
-          <p className="mt-3 text-xs text-gray">— {p.name}</p>
+        <div key={i} className="rounded-sm border border-[#454545] bg-[#191919] p-6 text-white">
+          <p className="text-sm leading-6 text-white/80">{p.request}</p>
+          <p className="mt-3 text-xs text-white/60">— {p.name}</p>
         </div>
       ))}
     </div>

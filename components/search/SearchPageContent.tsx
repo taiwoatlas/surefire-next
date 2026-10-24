@@ -19,7 +19,7 @@ export function SearchPageContent() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search sermons, ministries, services, empowerment programmes…"
-        className="w-full rounded-sm border border-line bg-charcoal px-5 py-4 text-lg"
+        className="w-full rounded-sm border border-[#454545] bg-[#191919] px-5 py-4 text-lg text-white placeholder:text-white/50 focus:border-[#c8192e] focus:outline-none"
         autoFocus
       />
 
