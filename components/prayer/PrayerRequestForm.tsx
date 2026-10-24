@@ -9,12 +9,12 @@ export function PrayerRequestForm() {
   const { status, waLink, handleSubmit } = useWhatsAppForm("seniorPastor", TEMPLATE);
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-sm border border-lineOnInk bg-white/5 p-8">
+    <form onSubmit={handleSubmit} className="rounded-sm border border-[#454545] bg-[#191919] p-5 text-white sm:p-8">
       <div>
         <label htmlFor="pName" className="text-xs text-gray-onInk">
           Name
         </label>
-        <input id="pName" name="name" type="text" required className="mt-1 w-full rounded-sm border border-lineOnInk bg-ink px-3 py-2 text-sm text-paper" />
+        <input id="pName" name="name" type="text" required className="mt-1 w-full rounded-sm border border-white/20 bg-[#101010] px-3 py-2 text-sm text-white placeholder:text-white/40" />
       </div>
 
       <div className="mt-4">

@@ -35,9 +35,9 @@ export function EventCalendar() {
   }
 
   return (
-    <div className="rounded-sm border border-line bg-charcoal p-6">
+    <div className="rounded-sm border border-[#454545] bg-[#191919] p-6 text-white">
       <div className="flex items-center justify-between">
-        <button type="button" onClick={prevMonth} aria-label="Previous month" className="rounded-sm px-3 py-1 text-sm hover:bg-stone">
+        <button type="button" onClick={prevMonth} aria-label="Previous month" className="rounded-sm px-3 py-1 text-sm text-white hover:bg-white/10">
           ←
         </button>
         <h3 className="font-display text-lg">
@@ -48,7 +48,7 @@ export function EventCalendar() {
         </button>
       </div>
 
-      <div className="mt-4 grid grid-cols-7 gap-1 text-center text-xs text-gray">
+      <div className="mt-4 grid grid-cols-7 gap-1 text-center text-xs text-white/65">
         {WEEKDAY_LABELS.map((d) => (
           <div key={d} className="py-1 font-semibold">
             {d}
@@ -61,7 +61,7 @@ export function EventCalendar() {
             <div
               key={i}
               className={`flex aspect-square items-center justify-center rounded-sm text-sm ${
-                day === null ? "" : isVigil ? "bg-red text-paper" : hasEvent ? "bg-gold text-ink" : "text-ink"
+                day === null ? "" : isVigil ? "bg-[#c8192e] text-white" : hasEvent ? "bg-[#f0cf72] font-semibold text-[#101010]" : "text-white"
               }`}
               title={isVigil ? "Night Vigil" : undefined}
             >
@@ -71,12 +71,12 @@ export function EventCalendar() {
         })}
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray">
+      <div className="mt-4 flex flex-wrap gap-4 text-xs text-white/70">
         <span className="flex items-center gap-2">
           <span className="h-3 w-3 rounded-sm bg-red" /> Night Vigil
         </span>
         <span className="flex items-center gap-2">
-          <span className="h-3 w-3 rounded-sm bg-gold" /> Confirmed event
+          <span className="h-3 w-3 rounded-sm bg-[#f0cf72]" /> Confirmed event
         </span>
       </div>
     </div>
