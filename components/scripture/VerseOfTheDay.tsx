@@ -20,10 +20,10 @@ export function VerseOfTheDay() {
   const verse = verses[index]!;
 
   return (
-    <div className="rounded-sm border border-lineOnInk bg-white/5 p-8 text-center">
-      <p className="font-mono text-xs uppercase tracking-wide text-gold">Verse of the Day</p>
-      <p className="mx-auto mt-4 max-w-xl font-display text-xl italic leading-relaxed text-paper">&ldquo;{verse.text}&rdquo;</p>
-      <p className="mt-4 text-sm text-gray-onInk">{verse.reference} (KJV)</p>
+    <div className="rounded-xl border border-white/15 bg-[#191919] p-6 text-center text-white shadow-[0_12px_36px_rgba(0,0,0,.12)] sm:p-8">
+      <p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-[#ff7a88]">Verse of the Day</p>
+      <p className="mx-auto mt-4 max-w-xl font-display text-xl italic leading-relaxed text-white sm:text-2xl">&ldquo;{verse.text}&rdquo;</p>
+      <p className="mt-4 text-sm font-semibold text-white/75">{verse.reference} (KJV)</p>
     </div>
   );
 }
