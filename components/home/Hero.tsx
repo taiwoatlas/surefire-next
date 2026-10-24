@@ -31,7 +31,7 @@ export function Hero() {
         </div>
         <div className="relative mx-auto w-full max-w-[540px] md:justify-self-end">
           <div className="relative ml-auto h-[245px] w-[82%] overflow-hidden rounded-sm border border-white/15 sm:h-[310px] md:h-[350px]">
-            <Image src="/images/church/building-chapel-facade.jpg" alt="The Surefire Christian Church chapel" fill sizes="(min-width: 768px) 40vw, 80vw" className="object-cover" />
+            <Image src="/images/church/sanctuary-interior.jpg" alt="Worship gathering inside the Surefire church sanctuary" fill sizes="(min-width: 768px) 40vw, 80vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4"><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#ff7a88]">Our house. Your family.</p><p className="mt-1 text-xl font-extrabold sm:text-2xl">Come as you are.</p></div>
           </div>
