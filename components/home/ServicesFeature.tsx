@@ -14,7 +14,7 @@ export function ServicesFeature() {
           <div className="grid bg-[#171717] px-4 py-3 text-[10px] font-bold uppercase tracking-[.18em] text-white/55 sm:grid-cols-[1.1fr_.8fr_1fr] sm:px-6">
             <span>Gathering</span><span className="hidden sm:block">Day</span><span className="hidden sm:block">Time</span>
           </div>
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div key={service.key} className="grid gap-2 border-t border-[#E6E6E6] px-4 py-4 sm:grid-cols-[1.1fr_.8fr_1fr] sm:items-center sm:px-6">
               <div className="flex items-center gap-3"><span className="grid size-9 shrink-0 place-items-center rounded-md bg-[#FCEBED] text-[#c8192e]"><CalendarDays size={16} /></span><div><p className="text-sm font-extrabold text-[#171717]">{service.name}</p><p className="mt-0.5 text-[11px] text-[#77716e] sm:hidden">{service.day}</p></div></div>
               <p className="hidden text-sm font-semibold text-[#4e4a48] sm:block">{service.day}</p>
