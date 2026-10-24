@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { primaryNav } from "@/data/navigation";
@@ -10,7 +11,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-[#101010] text-white shadow-[0_5px_22px_rgba(0,0,0,.18)]">
       <div className="mx-auto flex min-h-[68px] max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" aria-label={church.churchName} className="group flex min-w-0 items-center gap-3">
-          <span className="grid size-10 shrink-0 place-items-center rounded-md bg-[#c8192e] font-sans text-xl font-black text-white">S<span className="sr-only">urefire</span></span>
+          <Image src="/images/church-logo.jpg" alt="" aria-hidden="true" width={80} height={80} priority className="size-10 shrink-0 rounded-md object-contain" />
           <span className="min-w-0">
             <span className="block truncate text-sm font-bold leading-tight tracking-[-.02em] sm:text-base">Surefire Christian Church</span>
             <span className="mt-1 block text-[9px] font-semibold uppercase tracking-[.24em] text-[#f05a69]">Living Wonders</span>
