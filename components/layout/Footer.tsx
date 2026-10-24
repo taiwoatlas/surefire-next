@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { church } from "@/data/church";
@@ -8,7 +9,7 @@ export function Footer() {
     <footer className="bg-[#101010] text-white">
       <div className="mx-auto grid max-w-[1400px] gap-8 px-5 py-8 sm:px-8 md:grid-cols-[1.25fr_.75fr_.8fr] md:px-10 md:py-10">
         <div>
-          <Link href="/" className="inline-flex items-center gap-3"><span className="grid size-10 place-items-center rounded-md bg-[#c8192e] text-xl font-black text-white">S</span><span><span className="block text-sm font-extrabold">Surefire Christian Church</span><span className="mt-1 block text-[9px] font-bold uppercase tracking-[.22em] text-[#ff7a88]">Living Wonders</span></span></Link>
+          <Link href="/" aria-label={church.churchName} className="inline-flex items-center gap-3"><Image src="/images/church-logo.jpg" alt="" aria-hidden="true" width={80} height={80} className="size-10 shrink-0 rounded-md object-contain" /><span><span className="block text-sm font-extrabold">Surefire Christian Church</span><span className="mt-1 block text-[9px] font-bold uppercase tracking-[.22em] text-[#ff7a88]">Living Wonders</span></span></Link>
           <p className="mt-3 max-w-sm text-sm leading-6 text-white/60">{church.motto}. A community of faith, empowerment, and practical impact.</p>
           <div className="mt-3 flex items-start gap-2 text-xs leading-5 text-white/55"><MapPin size={15} className="mt-0.5 shrink-0 text-[#ff7a88]" /><span>{church.address}</span></div>
           <a href={`tel:${church.phone.church.replaceAll(" ", "")}`} className="mt-2 inline-flex items-center gap-2 text-xs text-white/65 transition hover:text-white"><Phone size={14} />{church.phone.church}</a>
