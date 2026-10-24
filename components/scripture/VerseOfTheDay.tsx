@@ -24,6 +24,7 @@ export function VerseOfTheDay() {
 
   if (selectedIndex === null || dailyIndex === null) return null;
   const verse = verses[selectedIndex];
+  if (!verse) return null;
 
   function showAnotherVerse() {
     setSelectedIndex((current) => {
