@@ -13,7 +13,7 @@ export function Header() {
         <Link href="/" aria-label={church.churchName} className="group flex min-w-0 items-center gap-3">
           <Image src="/images/church-logo.jpg" alt="" aria-hidden="true" width={80} height={80} priority className="size-10 shrink-0 rounded-md object-contain" />
           <span className="min-w-0">
-            <span className="block truncate text-sm font-bold leading-tight tracking-[-.02em] sm:text-base">Surefire Christian Church</span>
+            <span className="block truncate text-sm font-bold leading-tight tracking-[-.02em] sm:text-base">The Surefire Christian Church of God</span>
             <span className="mt-1 block text-[9px] font-semibold uppercase tracking-[.24em] text-[#f05a69]">Living Wonders</span>
           </span>
         </Link>

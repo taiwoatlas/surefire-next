@@ -47,7 +47,7 @@ export function MobileNav() {
       <div className="flex items-center justify-between border-b border-white/10 pb-5">
         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
           <Image src="/images/church-logo.jpg" alt="" aria-hidden="true" width={80} height={80} priority className="size-10 shrink-0 rounded-xl object-contain" />
-          <span><span className="block font-display text-base font-semibold">Surefire Christian Church</span><span className="mt-1 block font-mono text-[9px] uppercase tracking-[.22em] text-[#ff7a88]">Living Wonders</span></span>
+          <span><span className="block font-display text-base font-semibold">The Surefire Christian Church of God</span><span className="mt-1 block font-mono text-[9px] uppercase tracking-[.22em] text-[#ff7a88]">Living Wonders</span></span>
         </Link>
         <button type="button" aria-label="Close menu" onClick={() => setOpen(false)} className="rounded-full border border-white/20 p-2.5 transition hover:border-[#c8192e] hover:text-[#ff7a88]"><X aria-hidden="true" /></button>
       </div>
